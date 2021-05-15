@@ -65,64 +65,54 @@ The high-level steps covered in the lab are:
 
 ## Task 3 - Configure the "COVID cases by age group" Metrics Advisor data feed
 
-1. Open the [Azure Portal](https://portal.azure.com) and sign-in with your lab credentials.
-
-2. In the list of your recent resources, locate the the storage account named `aiinadaystorageXXXXXX`.
-
-    ![Locate storage account in Azure Portal](./media/datastore-01.png)
-
-3. Select `Access keys` from the left side menu, and then select `Show keys`. Save the storage account name, the `key1 Key` value, and the `key1 - Connection string` value for later use.
-
-    ![Storage account name and key](./media/datastore-03.png)
-
-4. Back to the Home page in Azure Portal, in the list of your recent resources, locate the Azure Metrics Advisor workspace and select it. If you are prompted to sign-in again, use the same lab Azure credentials you used at the previous step.
+1. Back to the Home page in Azure Portal, in the list of your recent resources, locate the Azure Metrics Advisor workspace and select it. If you are prompted to sign-in again, use the same lab Azure credentials you used at the previous step.
 ![Open Azure Metrics Advisor](./media/openmetricsadvisor.png)
 
-5. On the Metrics Advisor Quick start page, select the `Go to workspace` link in the first section to start working with the web-based [Metrics Advisor workspace](https://metricsadvisor.azurewebsites.net/).
+2. On the Metrics Advisor Quick start page, select the `Go to workspace` link in the first section to start working with the web-based [Metrics Advisor workspace](https://metricsadvisor.azurewebsites.net/).
 
     ![Start the web-based workspace](./media/startmetricsadvisor.png)
 
-6. On the Metrics Advisor welcome page, select your Directory, subscription and workspace information and select **Get started**. You are now prepared to create your first Data feed.
+3. On the Metrics Advisor welcome page, select your Directory, subscription and workspace information and select **Get started**. You are now prepared to create your first Data feed.
 
     ![Connect to Metrics Advisor workspace](./media/metrics-advisor-connect.png)
 
-7. With the Metrics Advisor workspace opened, select the **Add datafeed** option from the left navigation menu.
+4. With the Metrics Advisor workspace opened, select the **Add datafeed** option from the left navigation menu.
 
-8. Add the data feed by connecting to your time-series data source. Start by selecting the following parameters:
+5. Add the data feed by connecting to your time-series data source. Start by selecting the following parameters:
 
     - **Source type**: `Azure Blob Storage (JSON)`
     - **Granularity**: `Daily`
     - **Ingest data since (UTC)**: `2021-01-01`
-    - **Connection string**: provide the connection string from the blob storage access keys page. (`key1 - Connection string` copied on step 3) **<inject key="AzureCIStorageAccountType" style="color:#00ff00;font-weight:bold" enableCopy="true" />**
+    - **Connection string**: provide the connection string from the blob storage access keys page. (`key1 - Connection string` copied on **Before the hands-on lab** part or else please  follow Task 1 of Before the hands-on lab) 
     - **Container**: `jsonmetrics`
     - **Blob template**: `%Y-%m-%d.json` (since the daily json files are provided in with naming format)
     - **JSON format version**: `v2` (since we'll be using the age group dimension in our data schema)
 
     ![Data feed source properties](./media/adddatafeed.png)
 
-9. Select the **Verify and get schema button** to validate the configured connection.  If there is an error at this step, check that your connection string and blob template are correct and your Metrics Advisor instance is able to connect to the data source.
+6. Select the **Verify and get schema button** to validate the configured connection.  If there is an error at this step, check that your connection string and blob template are correct and your Metrics Advisor instance is able to connect to the data source.
 
-10. Once the data schema is loaded and shown like below, configure the appropriate fields as Dimension, Measure or Timestamp.
+7. Once the data schema is loaded and shown like below, configure the appropriate fields as Dimension, Measure or Timestamp.
 
     ![Schema configuration](./media/schemconfig.png)
 
-11. Scroll down towards the bottom of the page. For **Automatic roll-up** settings, select the **I need the service to roll-up my data** (1) option, select the link **Set roll-up columns** and include both dimensions (3).
+8. Scroll down towards the bottom of the page. For **Automatic roll-up** settings, select the **I need the service to roll-up my data** (1) option, select the link **Set roll-up columns** and include both dimensions (3).
 
     ![Automatic rollup settings](./media/automaticrollup.png)
 
-12. In the **Advanced settings** section, inside **Ingestion options**, set **Stop retrying after** to **0** hours to stop the ingestion process after the first run. 
+9. In the **Advanced settings** section, inside **Ingestion options**, set **Stop retrying after** to **0** hours to stop the ingestion process after the first run. 
     
     ![Advanced settings](./media/advancedsettings.png)
 
-13. In the **Misc** section, choose the option to **Fill previous** for anomaly detection model.
+10. In the **Misc** section, choose the option to **Fill previous** for anomaly detection model.
 
     ![Misc settings](./media/fillprevious.png)
 
-14. Provide the **Data feed name**: `covid-ages` and select **Submit** to confirm and submit the data feed.
+11. Provide the **Data feed name**: `covid-ages` and select **Submit** to confirm and submit the data feed.
 
     ![Submit schema configuration](./media/submitdatafeed.png)
 
-15. Wait for the ingestion progress dialog and select the **Details** link in order to observe the ingestion log by timestamp. Wait until the ingestion completes with success for all ingested json files.
+12. Wait for the ingestion progress dialog and select the **Details** link in order to observe the ingestion log by timestamp. Wait until the ingestion completes with success for all ingested json files.
 
     ![Check the ingestion progress](./media/ingestionprogress.png)
 

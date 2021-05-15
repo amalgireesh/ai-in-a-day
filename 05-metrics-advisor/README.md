@@ -14,13 +14,7 @@ You should follow all of the steps provided in this section _before_ taking part
 
     ![Locate storage account in Azure Portal](../05-metrics-advisor/media/datastore-01.png)
 
-2. Select `Containers` and then select `+ Container` to create a new blob storage container.
-
-    ![Create new blob storage container](../05-metrics-advisor/media/datastore-02.png)
-
-3. Enter `jsonmetrics` as the name, keep all other settings default, and then select `Create` to create the new container.
-
-4.  Select `Access keys` from the left side menu, and then select `Show keys`. Save the storage account name, the `key1 Key` value, and the `key1 - Connection string` value for later use.
+2.  Select `Access keys` from the left side menu, and then select `Show keys`. Save the storage account name, the `key1 Key` value, and the `key1 - Connection string` value for later use.
 
     ![Storage account name and key](../05-metrics-advisor/media/datastore-03.png)
 

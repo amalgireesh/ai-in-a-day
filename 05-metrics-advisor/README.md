@@ -2,6 +2,44 @@
 
 This lab covers the Metrics Advisor service features from Azure Cognitive Services.
 
+## Before the hands-on lab
+
+**Duration**: 20 minutes
+
+You should follow all of the steps provided in this section _before_ taking part in the hands-on lab ahead of time as some of these steps take time.
+
+## Task 1 - Prepare Azure Machine Learning workspace
+
+1. Open the [Azure Portal](https://portal.azure.com) and sign-in with your lab credentials. select the storage account named `aiinadaystorageXXXXXX`.
+
+    ![Locate storage account in Azure Portal](../05-metrics-advisor/media/datastore-01.png)
+
+2. Select `Containers` and then select `+ Container` to create a new blob storage container.
+
+    ![Create new blob storage container](../05-metrics-advisor/media/datastore-02.png)
+
+3. Enter `jsonmetrics` as the name, keep all other settings default, and then select `Create` to create the new container.
+
+4.  Select `Access keys` from the left side menu, and then select `Show keys`. Save the storage account name, the `key1 Key` value, and the `key1 - Connection string` value for later use.
+
+    ![Storage account name and key](../05-metrics-advisor/media/datastore-03.png)
+
+## Task 2 - Prepare the COVID cases per age group dataset
+
+1. With the Azure Machine Learning studio and the Jupyter notebook environment open, select the `preparemetricsfeeddata.ipynb` from **Notebooks** under **Author**.
+
+    ![preparemetricfeeddata notebook](media/notebook_05.png)
+
+> **Note**: Please ensure to click on **Authenticate** button if a pop-up notification comes like below.
+
+   ![authenticate pop-up](media/authenticate.png)
+
+> **Note**: Make sure you replace the `<BLOBSTORAGE_ACCOUNT_NAME>` and `<BLOBSTORAGE_ACCOUNT_KEY>` values in the variable initialization cell with the values you have noted down at the end of the previous task.
+
+   The notebook will guide you through a list of steps needed to prepare a time series-based dataset containing JSON files to be fed into the Metrics Advisor workspace. Each JSON file will contain daily data representing the count of COVID positive cases by age group.
+
+2. Execute the notebook cell by cell (using either Ctrl + Enter to stay on the same cell, or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
+
 ## Task 1 - Explore dashboard of COVID-19 data
 
 Understanding the source datasets is very important in AI and ML. To help you expedite the process, we have created a Power BI dashboard you can use to explore them at the begining of each lab.

@@ -20,7 +20,11 @@ You should follow all of the steps provided in this section _before_ taking part
 
 ## Task 2 - Prepare the COVID cases per age group dataset
 
-1. With the Azure Machine Learning studio and the Jupyter notebook environment open, select the `preparemetricsfeeddata.ipynb` from **Notebooks** under **Author**.
+1.  Navigate to back to the resource group **iot-<inject key="DeploymentID" enableCopy="false"/>**, select the AML Workspace named **ai-in-a-day-<inject key="DeploymentID" enableCopy="false"/>** and then click on **Launch Studio** button.
+
+    ![Launch Studio](media/launchstudio_lab05.png)
+
+2. With the Azure Machine Learning studio and the Jupyter notebook environment open, select the `preparemetricsfeeddata.ipynb` from **Notebooks** under **Author**.
 
     ![preparemetricfeeddata notebook](media/notebook_05.png)
 
@@ -32,7 +36,7 @@ You should follow all of the steps provided in this section _before_ taking part
 
    The notebook will guide you through a list of steps needed to prepare a time series-based dataset containing JSON files to be fed into the Metrics Advisor workspace. Each JSON file will contain daily data representing the count of COVID positive cases by age group.
 
-2. Execute the notebook cell by cell (using either Ctrl + Enter to stay on the same cell, or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
+3. Execute the notebook cell by cell (using either Ctrl + Enter to stay on the same cell, or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
 
 ## Hands-on Lab
 

@@ -10,7 +10,7 @@ You should follow all of the steps provided in this section _before_ taking part
 
 ## Task 1 - Prepare Azure Machine Learning workspace
 
-1. Open the [Azure Portal](https://portal.azure.com) and sign-in with your lab credentials. select the storage account named `aiinadaystorageXXXXXX`.
+1. Open the Azure Portal and sign-in with your lab credentials. select the storage account named `aiinadaystorageXXXXXX`.
 
     ![Locate storage account in Azure Portal](../05-metrics-advisor/media/datastore-01.png)
 
@@ -33,6 +33,8 @@ You should follow all of the steps provided in this section _before_ taking part
    The notebook will guide you through a list of steps needed to prepare a time series-based dataset containing JSON files to be fed into the Metrics Advisor workspace. Each JSON file will contain daily data representing the count of COVID positive cases by age group.
 
 2. Execute the notebook cell by cell (using either Ctrl + Enter to stay on the same cell, or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
+
+## Hands-on Lab
 
 ## Task 1 - Explore dashboard of COVID-19 data
 

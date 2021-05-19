@@ -1,5 +1,9 @@
 # Lab 5 - Data monitoring and anomaly detection using Metrics Advisor in Azure Cognitive Services
 
+**** 
+**This lab is read-only exercise Since Metrics Advisor is in Preview and we have seen Metrics Advisor deployment fails most of the time.**.
+****
+
 This lab covers the Metrics Advisor service features from Azure Cognitive Services.
 
 ## Before the hands-on lab

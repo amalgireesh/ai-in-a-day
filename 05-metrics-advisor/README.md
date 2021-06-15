@@ -27,8 +27,16 @@ You should follow all of the steps provided in this section _before_ taking part
 1.  Navigate to back to the resource group **iot-<inject key="DeploymentID" enableCopy="false"/>**, select the AML Workspace named **ai-in-a-day-<inject key="DeploymentID" enableCopy="false"/>** and then click on **Launch Studio** button.
 
     ![Launch Studio](media/launchstudio_lab05.png)
+2. In Azure Machine learning studio, open Jupyter notebook environment.
 
-2. With the Azure Machine Learning studio and the Jupyter notebook environment open, select the `preparemetricsfeeddata.ipynb` from **Notebooks** under **Author**.
+3. In the Jupyter notebook environment, navigate to the folder associated with your lab user.
+
+4. If the folder does not contain any notebooks, download the following items to your local machine:
+
+[Prepare metrics feed data](https://solliancepublicdata.blob.core.windows.net/ai-in-a-day/lab-05/preparemetricsfeeddata.ipynb)
+
+5. Upload the file by selecting the Upload button from the top right corner of the screen, and then selecting the blue Upload button to confirm.
+6. With the Azure Machine Learning studio and the Jupyter notebook environment open, select the `preparemetricsfeeddata.ipynb` from **Notebooks** under **Author**.
 
     ![preparemetricfeeddata notebook](media/notebook_05.png)
 
@@ -40,7 +48,7 @@ You should follow all of the steps provided in this section _before_ taking part
 
    The notebook will guide you through a list of steps needed to prepare a time series-based dataset containing JSON files to be fed into the Metrics Advisor workspace. Each JSON file will contain daily data representing the count of COVID positive cases by age group.
 
-3. Execute the notebook cell by cell (using either Ctrl + Enter to stay on the same cell, or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
+7. Execute the notebook cell by cell (using either Ctrl + Enter to stay on the same cell, or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
 
 ## Hands-on Lab
 

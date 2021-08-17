@@ -93,7 +93,7 @@ The high-level steps covered in the lab are:
     * Resource Group : **Ai-in-a-Day**
     * Region : Select the available Region from the dropdown
     * Name : **metricsadvisor-<inject key="DeploymentID" enableCopy="false"/>** 
-    * Pricing tier: **SO**
+    * Pricing tier: **S0**
    
      ![](media/created_ma.png)
 

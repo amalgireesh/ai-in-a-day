@@ -4,7 +4,7 @@ This lab covers the Metrics Advisor service features from Azure Cognitive Servic
 
 ## Before the hands-on lab
 
-**Duration**: 20 minutes
+**Duration**: 30 minutes
 
 You should follow all of the steps provided in this section _before_ taking part in the hands-on lab ahead of time as some of these steps take time.
 

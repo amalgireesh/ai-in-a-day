@@ -1,7 +1,3 @@
-**** 
-**This will be a read-only lab, as we are facing deployment issues with Azure Metrics Advisor resource. You can still go through the lab and try creating Metrics advisor resource , but the chances of getting it succeeded are very low**.
-****
-
 # Lab 4 - Data monitoring and anomaly detection using Metrics Advisor in Azure Cognitive Services (Read-Only)
 
 This lab covers the Metrics Advisor service features from Azure Cognitive Services.
@@ -81,6 +77,32 @@ The high-level steps covered in the lab are:
 - Perform root cause analysis
 - Explore anomalies with hard thresholds (optional)
 
+## Task 3 -  Deploy Azure Cognitive Services Metrics Advisior instance
+
+1. Navigate to the Azure portal and click on the menu icon and select **+ Create a resource**
+
+   ![](media/menu_icon.png)  
+
+2. In the search bar type **Metrics Advisor** and then select **Create**
+
+   ![](media/metrics_advisor.png)  
+
+3. Under Project details on Create Metrics Advisor page provide the following details and click **Create + Review**
+
+    * Subscription : Select the available Subscription
+    * Resource Group : **Ai-in-a-Day**
+    * Region : Select the available Regon from the dropdown
+    * Name : **metricsadvisor-<inject key="DeploymentID" enableCopy="false"/>** 
+    * Pricing tier: **SO**
+   
+     ![](media/created_ma.png)
+
+> **Note**: Ensure to enable the confirmation for the Service Agreements and Terms.
+
+4. Once the validation is passed click on **Create**.
+
+> **Note**: Please wait untill the deployment gets succeeded and you can proceed with Task 3
+   
 ## Task 3 - Configure the "COVID cases by age group" Metrics Advisor data feed
 
 1. Back to the Home page in Azure Portal, in the list of your recent resources, locate the Azure Metrics Advisor workspace and select it. If you are prompted to sign-in again, use the same lab Azure credentials you used at the previous step.

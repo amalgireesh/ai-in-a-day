@@ -91,7 +91,7 @@ The high-level steps covered in the lab are:
 
     * Subscription : Select the available Subscription
     * Resource Group : **Ai-in-a-Day**
-    * Region : Select the available Regon from the dropdown
+    * Region : Select the available Region from the dropdown
     * Name : **metricsadvisor-<inject key="DeploymentID" enableCopy="false"/>** 
     * Pricing tier: **SO**
    
